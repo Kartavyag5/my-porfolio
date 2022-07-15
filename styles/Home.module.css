@@ -1,5 +1,6 @@
 .container {
   padding: 0 2rem;
+  background-image: url('space2.jpg');
 }
 
 .main {
@@ -10,6 +11,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .footer {
@@ -40,9 +42,69 @@
 }
 
 .title {
+  color:white;
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  /* font-family: 'Courier New', Courier, monospace; */
+  font-size: 8rem;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(70, end),
+    blink-caret .90s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 80% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+.topics{
+  display:flex;
+  flex-direction: column;
+  align-self: baseline;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-left: 50px solid rgb(0, 218, 246);
+  border-bottom: 25px solid transparent;
+  margin:10px;
+  color:white;
+  font-size: 50px;
+  font-weight: 600;
+  transition: border-left 0.5s;
+  display: flex;
+}
+
+.triangle p{
+  margin: -26px 0px 0px 10px;
+}
+
+
+.triangle:hover{
+  /* transition: border-left 2s; */
+  border-left: 90px solid rgb(226, 255, 4);
+  color:rgb(0, 255, 247);
+
+}
+
+.img{
+  width: 60px;
+  height: 60px;
+  margin: -26px 0px 0px 10px;
 }
 
 .title,
